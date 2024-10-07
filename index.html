@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <header class="header open">
+    <header class="header">
         <div class="header__top">
             <div class="header__tel">
                 <img src="./img/Tel.png" alt="tel">
@@ -34,13 +34,11 @@
             </div>                
         </div>
         <div class="header__menu">
-            <!-- <burger-menu></burger-menu> -->
-             <button class="header__burger-btn">
-                <span></span><span></span><span></span>
-             </button>
-
-
-<!-- <burger-menu></burger-menu> -->
+            <div class="open">
+                <button class="header__burger-btn" id="burger">
+                    <span></span><span></span><span></span>
+                 </button>
+            </div>             
             <div class="header__logo">
                 <img src="./img/logo.png" alt="Logo">
             </div>
@@ -420,6 +418,8 @@
                     </div>                 
                 </div>                
                 <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </section>
@@ -447,8 +447,8 @@
                 <span>E-mail:</span>
                 <p>moreon@more-on.ru</p>
             </div>
-            <div class="contactsMap">
-                <img src="./img/map.png" alt="">
+            <div class="contactsInfo">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23978.177564726855!2d69.22978877431642!3d41.302941799999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bd94a38eb2f%3A0x7f084c3703ba3bfa!2sTEHNIKUM%20School!5e0!3m2!1sru!2s!4v1728340622949!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -548,14 +548,14 @@
                         <input type="checkbox" name="checkLesson" required>
                         Соглашаюсь с условиями обработки данных
                     </label>                    
-                    <button class="btn__green">Отправить</button>                    
+                    <button class="btn__green" id="submitBtn">Отправить</button>                    
                 </form>
             </div>
         </div>
         <div class="thankYouPage">            
             <h2>Спасибо!</h2>
             <p>Менеджер свяжется с Вами в ближайшее время.</p>
-            <button class="btn__green">Хорошо!</button>
+            <button class="btn__green" id="submitBtn2">Хорошо!</button>
         </div>
     </div>
 

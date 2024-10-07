@@ -1,3 +1,4 @@
+// ---wrapper--- //
 let wrapper = document.querySelector (".wrapper");
 let popUp = document.querySelector (".wrapper .popUp");
 let typ = document.querySelector (".wrapper .thankYouPage");
@@ -46,4 +47,15 @@ function showTYP() {
 }
 
 
+document.getElementById('submitBtn2').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.wrapper').style.display = 'none';
+});
 
+
+// ---burger-menu--- //
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("burger").addEventListener("click", function() {
+        document.querySelector("header").classList.toggle("open")
+    })
+})
