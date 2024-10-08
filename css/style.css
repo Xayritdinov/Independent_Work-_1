@@ -36,16 +36,19 @@ section {
 .header__menu {
     background-color: #000908;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;   
     align-items: center;
     padding: 19px calc(9.8vw - 25.22px); /*100-10*/
 }
 .header__logo img{
-    width: 155px;
+    width: 155px;    
+}
+.header__logo {
+    margin-right: auto;
 }
 .header__navigation {    
     display: flex;
-    gap: calc(11.8vw - 107.86px); /*43-10*/    
+    gap: calc(11.8vw - 107.86px);   
     font-size: 14px;
     font-weight: 400;
 }
