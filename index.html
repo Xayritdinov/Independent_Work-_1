@@ -97,11 +97,11 @@
             <button class="btn__grey">Аквапарк</button>
             <button class="btn__grey">Термы</button>
             <button class="btn__grey">СПА</button>
-            <button class="btn__grey">Праздникик</button>
+            <button class="btn__grey">Праздники</button>
             <button class="btn__grey">Фитнес</button>
             <button class="btn__grey">Боулинг</button>
         </div>
-        <div class="actions__img">
+        <div class="actions__img active" actionBtn = "Фитнес">
             <div class="swiper">
                 <div class="swiper-wrapper">                    
                     <div class="swiper-slide">
@@ -115,13 +115,15 @@
                     </div>                    
                     <div class="swiper-slide">
                         <img src="./img/fit_2.png" alt="fit 4">
-                    </div>                 
+                    </div>  
+                    <div class="swiper-slide">
+                        <img src="./img/fit_3.png" alt="fit 5">
+                    </div>      
                 </div>                
                 <div class="swiper-pagination"></div>                
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-            </div>
-        </div>
+            </div>        
     </section>
 
     <section class="news">
@@ -180,8 +182,22 @@
                                 Body Art – сочетание физической тренировки и дыхательных практик.
                             </div>
                         </div>
+                    </div> 
+                    <div class="swiper-slide">
+                        <div class="newsCardBox__inner">
+                            <div class="newsCardBox__img">
+                                <img src="./img/news_3.png" alt="news_5">
+                            </div>
+                            <div class="newsCardBox__text">
+                                Самооборона для женщин Hands Off
+                            </div>
+                            <div class="newsCardBox__text2">
+                                Не будь “легкой” мешенью, занимайся в Moreon-Fitness
+                            </div>
+                        </div>
                     </div>                 
-                </div>                
+                </div>
+                               
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
@@ -368,6 +384,7 @@
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
+            </div>
         </div>
         
 
@@ -511,7 +528,7 @@
                 </div>
                 <div class="footerInfo__inner4">
                     <div>Скачать приложение</div>
-                    <div>
+                    <div class="GooglePlay">
                         <img src="./img/GooglePlay.png" alt="GooglePlay">
                         <img src="./img/AppStore.png" alt="AppStore">
                     </div> 
@@ -537,6 +554,7 @@
 
     <div class="wrapper">       
         <div class="popUp">
+            <button class="close-button">&times;</button>
             <div class="form">
                 <h2>Оставьте свои контактные данные</h2>
                 <p>Мы расскажем вам о всех преимуществах клубной карты Moreon Fitness</p>
@@ -562,27 +580,39 @@
     <script src="./js/script.js"></script>
 
     <script src="./swiper/swiper-bundle.min.js"></script>
+    
     <script>
-        const swiper = new Swiper('.swiper', {        
+        let swiper = new Swiper('.swiper', {        
             loop: true,
             autoplay: {
-                delay:5000,
+                delay:3000000,
             },
             breakpoints: {
                 320: {
-                slidesPerView: 1,
-                spaceBetween: 10
+                    slidesPerView: 1,
                 },
                 850: {
+                    slidesPerView: 2,
+                },
+                1280: {
                     slidesPerView: 3,
-                    spaceBetween: 25            
-                }
-            },
+                },
+                1680: {
+                    slidesPerView: 4,
+                }, 
+            },   
+            spaceBetween: 30,             
             pagination: {
                 el: '.swiper-pagination',
-            }
+            },
+            clickable: true,
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
         });
     </script>
-
+    
+    
 </body>
 </html>

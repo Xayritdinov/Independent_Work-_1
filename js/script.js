@@ -46,11 +46,14 @@ function showTYP() {
     typ.style.display = "flex";
 }
 
-
+// ---Close-Btn--- //
 document.getElementById('submitBtn2').addEventListener('click', function(e) {
     e.preventDefault();
     document.querySelector('.wrapper').style.display = 'none';
 });
+document.querySelector('.close-button').addEventListener('click', function() {
+    document.querySelector('.wrapper').style.display = 'none';
+  });
 
 
 // ---burger-menu--- //
