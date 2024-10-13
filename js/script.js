@@ -32,7 +32,7 @@ formBtn.addEventListener ("click", sendForm);
 function sendForm() {
     event.preventDefault();    
     if (username.value.length > 1) {
-        if (userphone.value.length == 13){
+        if (userphone.value.length > 1){
             showTYP();
         } else {
             console.log ('неверный номер'); 
